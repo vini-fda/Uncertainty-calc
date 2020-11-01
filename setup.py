@@ -12,7 +12,7 @@ setuptools.setup(
     license="GPLv3",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/vini-fda/uncertainty-calc",
+    url="https://github.com/vini-fda/u-calc",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
