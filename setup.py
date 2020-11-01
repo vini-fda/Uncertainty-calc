@@ -9,6 +9,7 @@ setuptools.setup(
     author="vini-fda, pekpuglia",
     author_email="",
     description="Calculator with uncertainties",
+    license="GPLv3",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/vini-fda/uncertainty-calc",
