@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="uncertainty-calc-vini-fda", # Replace with your own username
+    name="u-calc",
     version="0.0.1",
     author="vini-fda, pekpuglia",
     author_email="",
