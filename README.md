@@ -4,9 +4,9 @@ Tired of doing physics calculations by hand or with spreadsheets? Look no furthe
 
 ## HOW TO
 
-A simple use case:
+A simple use case: adding two numbers with uncertainties. 
 
-Adding two numbers with uncertainties. Let's say `x = (23.00 +- 0.01)` and `y = (12.02 +- 0.03)`.
+Let's say `x = (23.00 +- 0.01)` and `y = (12.02 +- 0.03)`.
 
 Open up the python interpreter and:
 
@@ -19,6 +19,8 @@ Open up the python interpreter and:
 ```
 
 In your python files, you can just `import` this module just like any other.
+
+## Installation
 
 To install it, you only need `pip`. Example for v0.0.1:
 ```bash
