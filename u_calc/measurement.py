@@ -1,5 +1,3 @@
-
-
 class Measurement:
     def __init__(self, val, unc):
         self.val = val
