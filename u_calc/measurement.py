@@ -15,7 +15,7 @@ class Measurement:
             val = self.val*m2.val
             unc = val*norm(self.unc/self.val, m2.unc/m2.val)
             return Measurement(val, unc)
-        #senão, é escalar
+        #Otherwise, it's a scalar
         else:
             return Measurement(self.val*m2, self.unc*m2)
     def __truediv__(self, m2):
