@@ -18,6 +18,9 @@ class Measurement:
         #Otherwise, it's a scalar
         else:
             return Measurement(self.val*m2, self.unc*m2)
+    #Define multiplication as commutative
+    __rmul__ = __mul__
+
     def __truediv__(self, m2):
         if isinstance(m2, Measurement):
             val = self.val/m2.val
