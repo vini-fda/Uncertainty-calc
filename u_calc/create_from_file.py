@@ -1,4 +1,4 @@
-from .measurement import Measurement
+import measurement as m
 
 def read(filename, headerline = False, col = 0, totalcol = 1):
     #Reads the data from the file.
@@ -13,11 +13,16 @@ def read(filename, headerline = False, col = 0, totalcol = 1):
     return data
 
 #The standard deviation of the mean
-def sigma_m(data):
+def sigma_m(data, unc = 0):
+    #Data must be number array, for use with unc, or
     l = len(data)
     av = sum(data)/l
-    return ( sum([(x-av)**2 for x in data])/((l-1)*l) ) ** 0.5
+    #deviation for the distribution
+    dist_sigma = (sum([(x-av)**2 for x in data])/(l-1)) ** 0.5
+    #compounding measurement uncertainty with distribution uncertainty
+    total_sigma = m.norm(dist_sigma, unc)
+    return total_sigma/(l) ** 0.5
 
-def create(filename, headerline = False, col = 0, totalcol = 1):
-    data = read(filename, headerline = False, col = 0, totalcol = 1)
-    return Measurement( sum(data)/len(data), sigma_m(data) )
+def create(filename, headerline = False, col = 0, totalcol = 1, unc = 0):
+    data = read(filename, headerline, col, totalcol)
+    return m.Measurement( sum(data)/len(data), sigma_m(data, unc) )
