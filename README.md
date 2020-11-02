@@ -26,3 +26,11 @@ To install it, you only need `pip`. Example for v0.0.1:
 ```bash
 $ pip install u-calc==0.0.1
 ```
+
+If you want to install the **latest version** from this repo, you need to:
+ - `git clone` this repository(using http or ssh)
+ - Make sure you're in the `master` branch
+ - Run `pip install -e .` in the repository root(likely to be a directory called `u_calc/`) to [create a symlink](https://stackoverflow.com/questions/42609943/what-is-the-use-case-for-pip-install-e)
+ - You're finished!:smile:
+ 
+ **Note**: sometimes, you might have to use `python3 -m pip` instead of just `pip`. [You can read about this here](https://snarky.ca/why-you-should-use-python-m-pip/)
