@@ -19,5 +19,5 @@ def sigma_m(data):
     return ( sum([(x-av)**2 for x in data])/((l-1)*l) ) ** 0.5
 
 def create(filename, headerline = False, col = 0, totalcol = 1):
-    data = read(filename)
+    data = read(filename, headerline = False, col = 0, totalcol = 1)
     return Measurement( sum(data)/len(data), sigma_m(data) )
