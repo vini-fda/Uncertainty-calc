@@ -1,4 +1,4 @@
-import measurement as m
+from . import measurement as m
 
 def read(filename, headerline = False, col = 0, totalcol = 1):
     #Reads the data from the file.
