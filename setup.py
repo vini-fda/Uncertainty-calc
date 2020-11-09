@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="u-calc",
-    version="0.0.2",
+    version="0.0.3",
     author="vini-fda, pekpuglia",
     author_email="",
     description="Calculator with uncertainties",
